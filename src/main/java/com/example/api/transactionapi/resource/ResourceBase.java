@@ -39,8 +39,8 @@ public class ResourceBase<T> {
 		return ResponseEntity.status(HttpStatus.OK).body(listaVazia);
 	}
 
-	protected ResponseEntity<List<T>> responderListaDeItens(List<T> itens) {
-		return ResponseEntity.status(HttpStatus.OK).body(itens);
+	protected ResponseEntity<List<T>> resouceListOfItems(List<T> items) {
+		return ResponseEntity.status(HttpStatus.OK).body(items);
 	}
 
 	protected ResponseEntity<T> responderRequisicaoMalSucedida() {

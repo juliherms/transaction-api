@@ -27,7 +27,12 @@ public class UserResource extends ResourceBase<UserDTO>{
 	@Autowired
 	private IUserService userService;
 
-	
+	/**
+	 * Method responsible to get actual balance from user
+	 * @param paginacao
+	 * @param login
+	 * @return
+	 */
 	@GetMapping("/{login}/balance")
 	public ResponseEntity<UserDTO> getBalance(@PageableDefault(page = 0, size = 20) Pageable paginacao,
 			@PathVariable String login) {
@@ -36,10 +41,15 @@ public class UserResource extends ResourceBase<UserDTO>{
 		return resourceCreadtedWithItem(usuarioDTO);
 	}
 	
+	/**
+	 * Method responsible to list contacts from login
+	 * @param login
+	 * @return
+	 */
 	@GetMapping("/contacts")
 	public ResponseEntity<List<UserDTO>> list(@RequestParam String login) {
 		List<UserDTO> usuarios = userService.list(login);
-		return responderListaDeItens(usuarios);
+		return resouceListOfItems(usuarios);
 	}
 
 }
