@@ -51,5 +51,11 @@ public class UserResource extends ResourceBase<UserDTO>{
 		List<UserDTO> usuarios = userService.list(login);
 		return resouceListOfItems(usuarios);
 	}
+	
+	@GetMapping("/{login}")
+	public ResponseEntity<UserDTO> search(@PathVariable String login) {
+		UserDTO usuario = userService.findByLogin(login);
+		return resourceCreadtedWithItem(usuario);
+	}
 
 }
