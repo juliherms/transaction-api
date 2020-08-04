@@ -43,7 +43,7 @@ public class TransactionResource extends ResourceBase<TransactionDTO> {
 			UriComponentsBuilder uriBuilder) {
 
 		TransactionDTO transactionReturnDTO = transactionService.process(transactionDTO);
-		String path = "/transactions/{codigo}";
+		String path = "/transactions/{code}";
 
 		return responderItemCriadoComURI(transactionReturnDTO, uriBuilder, path, transactionReturnDTO.getCode());
 	}

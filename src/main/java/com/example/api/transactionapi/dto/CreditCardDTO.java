@@ -20,7 +20,7 @@ import lombok.Data;
 public class CreditCardDTO {
 
 	@NotBlank
-	private FlagCard bandeira;
+	private FlagCard flag;
 
 	@NotBlank
 	private String securityCode;

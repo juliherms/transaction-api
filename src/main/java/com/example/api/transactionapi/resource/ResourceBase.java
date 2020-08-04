@@ -9,9 +9,19 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.util.UriComponentsBuilder;
 
+/**
+ * This class responsible to return element for end point.
+ * @author j.a.vasconcelos
+ *
+ * @param <T>
+ */
 public class ResourceBase<T> {
 
-	
+	/**
+	 * Return HTTP Created with object.
+	 * @param object
+	 * @return
+	 */
 	protected ResponseEntity<T> resourceCreadtedWithItem(T object) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(object);
 	}
