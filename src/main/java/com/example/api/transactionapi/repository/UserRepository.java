@@ -26,7 +26,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	 * @param value
 	 */
 	@Modifying
-	@Query("update User u set u.saldo = u.balance - ?2 where u.login = ?1")
+	@Query("update User u set u.balance = u.balance - ?2 where u.login = ?1")
 	void updateDecrementBalance(String login, Double value);
 	
 	/**

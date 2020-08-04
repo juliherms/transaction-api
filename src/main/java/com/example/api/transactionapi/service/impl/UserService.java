@@ -71,6 +71,7 @@ public class UserService implements IUserService {
 	@Override
 	public List<UserDTO> list(String login) {
 
+		//exclude my login
 		List<User> users = userRepository.findAll();
 		return userConversor.converterEntitiesToDtos(
 				users.stream().filter(v -> !v.getLogin().equals(login)).collect(Collectors.toList()));

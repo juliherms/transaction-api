@@ -27,12 +27,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "TRANSACTION")
+@Table(name = "TB_TRANSACTION")
 public class Transaction extends EntityBase {
 
 	@Column(name = "CODE", nullable = false)
 	private String code;
-
+	
 	@ManyToOne(cascade = { CascadeType.MERGE })
 	@JoinColumn(name = "TR_USER_SOURCE", nullable = false)
 	private User userSource;

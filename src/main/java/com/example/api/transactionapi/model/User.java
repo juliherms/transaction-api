@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "USER")
+@Table(name = "TB_USER")
 public class User extends EntityBase {
 
 	@Column(name = "LOGIN", nullable = false)

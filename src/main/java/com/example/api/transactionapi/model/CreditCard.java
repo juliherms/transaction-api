@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "CREDIT_CARD")
+@Table(name = "TB_CREDIT_CARD")
 public class CreditCard extends EntityBase {
 
 	@Column(name = "NUMBER", nullable = false)
