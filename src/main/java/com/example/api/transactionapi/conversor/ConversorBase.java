@@ -7,13 +7,23 @@ import java.util.List;
  * This class responsible to converter Entity to DTO and DTO to Entity
  * @author j.a.vasconcelos
  *
- * @param <E>
- * @param <D>
+ * @param <E> - Entity
+ * @param <D> - DTO
  */
 public abstract class ConversorBase<E, D> {
 
+	/**
+	 * Method responsible to convert Entity do DTO
+	 * @param entity
+	 * @return
+	 */
 	public abstract D converterEntityToDto(E entity);
 
+	/**
+	 * Method responsible to convert DTO to Entity
+	 * @param dto
+	 * @return
+	 */
 	public abstract E converterDtoToEntity(D dto);
 
 	/**

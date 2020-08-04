@@ -46,6 +46,9 @@ public class UserService implements IUserService {
 		return userConversor.converterEntityToDto(user);
 	}
 
+	/**
+	 * Method responsible to update balance async
+	 */
 	@Override
 	@Async("asyncExecutor")
 	@Transactional
