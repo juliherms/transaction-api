@@ -56,10 +56,10 @@ public class TransactionResource extends ResourceBase<TransactionDTO> {
 	 * @return
 	 */
 	@GetMapping
-	public ResponseEntity<Page<TransactionDTO>> listar(@PageableDefault(page = 0, size = 20) Pageable paginacao,
+	public ResponseEntity<Page<TransactionDTO>> listar(@PageableDefault(page = 0, size = 20) Pageable pageable,
 			@RequestParam String login) {
 
-		Page<TransactionDTO> transacoes = transactionService.list(paginacao, login);
-		return responderListaDeItensPaginada(transacoes);
+		Page<TransactionDTO> transactions = transactionService.list(pageable, login);
+		return responderListaDeItensPaginada(transactions);
 	}
 }
