@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.api.transactionapi.dto.UserDTO;
+import com.example.api.transactionapi.resource.swagger.IUserResource;
 import com.example.api.transactionapi.service.IUserService;
 
 /**
@@ -21,7 +22,8 @@ import com.example.api.transactionapi.service.IUserService;
  */
 @RestController
 @RequestMapping("/users")
-public class UserResource extends ResourceBase<UserDTO> {
+public class UserResource extends ResourceBase<UserDTO>implements IUserResource {
+
 
 	@Autowired
 	private IUserService userService;
