@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.example.api.transactionapi.dto.TransactionDTO;
+import com.example.api.transactionapi.resource.swagger.ITransactionResource;
 import com.example.api.transactionapi.service.ITransactionService;
 
 /**
@@ -26,7 +27,7 @@ import com.example.api.transactionapi.service.ITransactionService;
  */
 @RestController
 @RequestMapping("/transactions")
-public class TransactionResource extends ResourceBase<TransactionDTO> {
+public class TransactionResource extends ResourceBase<TransactionDTO> implements ITransactionResource {
 
 	@Autowired
 	private ITransactionService transactionService;

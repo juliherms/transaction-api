@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiResponses;
 import io.swagger.annotations.Authorization;
 
 /**
- * Class responsible to detail User Resource Endpoint
+ * Class responsible to detail User Resource End point
  * 
  * @author j.a.vasconcelos
  *
@@ -28,7 +28,7 @@ public interface IUserResource {
 	@ApiOperation(value = "Find balance user by login", nickname = "getBalance", notes = "", response = UserDTO.class, responseContainer = "object", authorizations = {
 			@Authorization(value = "basicAuth") }, tags = { "users" })
 	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "Get balance sucess", response = UserDTO.class, responseContainer = "object"),
+			@ApiResponse(code = 200, message = "Get balance success", response = UserDTO.class, responseContainer = "object"),
 			@ApiResponse(code = 400, message = "Error request", response = ErrorDTO.class, responseContainer = "object"),
 			@ApiResponse(code = 401, message = "User without access"),
 			@ApiResponse(code = 404, message = "User not found") })
@@ -38,7 +38,7 @@ public interface IUserResource {
 	@ApiOperation(value = "Find all contacts by user from login", nickname = "list", notes = "", response = UserDTO.class, responseContainer = "object", authorizations = {
 			@Authorization(value = "basicAuth") }, tags = { "users", })
 	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "All contacts sucess", response = UserDTO.class, responseContainer = "object"),
+			@ApiResponse(code = 200, message = "All contacts success", response = UserDTO.class, responseContainer = "object"),
 			@ApiResponse(code = 400, message = "Error request", response = ErrorDTO.class, responseContainer = "object"),
 			@ApiResponse(code = 401, message = "User without access"),
 			@ApiResponse(code = 404, message = "User not found") })
@@ -48,7 +48,7 @@ public interface IUserResource {
 	@ApiOperation(value = "Find user by login", nickname = "search", notes = "", response = UserDTO.class, responseContainer = "object", authorizations = {
 			@Authorization(value = "basicAuth") }, tags = { "users", })
 	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "Get user sucess", response = UserDTO.class, responseContainer = "object"),
+			@ApiResponse(code = 200, message = "Get user success", response = UserDTO.class, responseContainer = "object"),
 			@ApiResponse(code = 400, message = "Error request", response = ErrorDTO.class, responseContainer = "object"),
 			@ApiResponse(code = 401, message = "User without access"),
 			@ApiResponse(code = 404, message = "User not found") })
